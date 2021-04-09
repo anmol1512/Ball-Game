@@ -1,5 +1,11 @@
 import pygame
 pygame.init()
-win=pygame.display.set_mode((700,700))
+width=height=700
+win=pygame.display.set_mode((width,height))
 pygame.display.set_caption('BALL GAME')
-pygame.time.delay(10000)
+run=True
+while run:
+    for event in pygame.event.get():
+        if event.type==pygame.QUIT:
+            run=False
+pygame.quit()
