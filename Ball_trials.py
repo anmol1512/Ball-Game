@@ -12,13 +12,13 @@ while run:
         if event.type==pygame.QUIT:
             run=False
     key=pygame.key.get_pressed()
-    if key[pygame.K_UP]:
+    if key[pygame.K_w] and y>radius:
         y-=vel
-    if key[pygame.K_DOWN]:
+    if key[pygame.K_s] and y<height-radius:
         y+=vel
-    if key[pygame.K_LEFT]:
+    if key[pygame.K_a] and x>radius:
         x-=vel
-    if key[pygame.K_RIGHT]:
+    if key[pygame.K_d] and x<width-radius:
         x+=vel
     win.fill((0,0,0),rect=None)
     pygame.draw.circle(win,(150,0,0),(x,y),radius)
